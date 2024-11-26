@@ -1,11 +1,14 @@
 #' ggCircuit
 #'
+#' @description
+#' This is a custom base function, which gets called by the wrapper CircuitPlot, which creates a circular node layout and then uses trigonometry to place, shorten, and offset the paracrine edges. All graphical work is done with ggplot2. The output is a ggplot object. This function can be modified / updated to change the 'look' of the output plot.
+#'
 #' @param edge.aggregate An edge aggregate object, output from AggregateEdgeData
 #' @param node.aggregate An node aggregate object, output from AggregateNodeData
 #' @param graph.angle The orientation angle of the whole CircuitPlot graph
 #' @param h Edge start and end offset from node center (the amount the arrows are shortened)
 #' @param offset Spacing between opposing paracrine arrows from center line
-#' @param autocrine.offset
+#' @param autocrine.offset #### MSBR not clear yet what this does, or if it is optimal approach
 #' @return A circuit plot (ggplot object)
 
 ggCircuit <- function(edge.aggregate,

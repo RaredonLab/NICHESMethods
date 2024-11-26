@@ -66,3 +66,18 @@ ggCircuit(node.aggregate = node.aggregate,
           cols.use = color_pal)
 
 # Final step: test CircuitPlot function - for sophie to complete
+# 1. see if you can get CircuitPlot working, kind of like this (you will need to change some parameters)
+CircuitPlot(transcr.obj = lung.combined,
+            connect.obj = cell.to.cell,
+            feature = 'Vegfa—Kdr',
+            group.by = 'CellClass',
+            graph.angle = 45,
+            h = 0.2,
+            offset = 0.05,
+            autocrine.offset = 0.02,
+            edge.scale.factor = 20,
+            arrow.head.angle = 15,
+            arrow.head.length = 0.03,
+            autocrine.arrow.curvature = 10,
+            cols.use = RColorBrewer::brewer.pal(4,'Set2'),
+            edge.fixed = T)
